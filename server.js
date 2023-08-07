@@ -11,6 +11,8 @@ app.get('/fruits', (req, res) => {
     res.send(fruits)
 })
 
+
+// GROUPWORK where we added filter requests based of query parameters in the URL
 app.get('/filter', (req, res) => {
     console.log(req.query)
     let filterArray = []
