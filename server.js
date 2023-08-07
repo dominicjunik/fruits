@@ -43,7 +43,10 @@ app.get('/filter', (req, res) => {
         }
     }
 
+    
     res.send(filterArray)
+   
+    
 
    
 })
