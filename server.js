@@ -18,10 +18,15 @@ app.get('/filter', (req, res) => {
     let filterArray = []
     Boolean('false')
     if (req.query.readyToEat) {
-        let edible
-        if (req.query.readyToEat === 'false'){
-            edible = false
-        } else {edible = true}                
+
+        // how to parse a boolean from a string to a value
+        // setting a new variable equal to the evaluation of our queury value compared to the string 'true'
+        // 'true' === 'true' returns true 
+        // else returns false
+        let edible = (req.query.readyToEat.toLowerCase() === 'true')
+        // if (req.query.readyToEat === 'false'){
+        //     edible = false
+        // } else {edible = true}                
        
         let edibleFruits = fruits.filter((fruit) => fruit.readyToEat === edible)
         console.log(edibleFruits)
